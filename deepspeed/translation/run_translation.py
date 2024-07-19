@@ -28,9 +28,8 @@ from typing import Optional
 import datasets
 import evaluate
 import numpy as np
-from datasets import load_dataset
-
 import transformers
+from datasets import load_dataset
 from transformers import (
     AutoConfig,
     AutoModelForSeq2SeqLM,
@@ -48,12 +47,11 @@ from transformers import (
     set_seed,
 )
 from transformers.trainer_utils import get_last_checkpoint
-from transformers.utils import check_min_version, send_example_telemetry
+from transformers.utils import send_example_telemetry
 from transformers.utils.versions import require_version
 
-
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
-check_min_version("4.38.0.dev0")
+# check_min_version("4.38.0.dev0")
 
 require_version("datasets>=1.8.0", "To fix: pip install -r examples/pytorch/translation/requirements.txt")
 
