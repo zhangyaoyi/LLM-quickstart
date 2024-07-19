@@ -1,7 +1,7 @@
 # DeepSpeed ZeRO-2 模式单 GPU 训练翻译模型（T5-Small）
 deepspeed --num_gpus=1 translation/run_translation.py \
 --deepspeed config/ds_config_zero2.json \
---model_name_or_path t5-small --per_device_train_batch_size 140 \
+--model_name_or_path t5-small --per_device_train_batch_size 10 \
 --output_dir models/t5-small-deepspeed-round1 --overwrite_output_dir --fp16 \
 --do_train --num_train_epochs 2 \
 --dataset_name wmt16 --dataset_config "ro-en" \
